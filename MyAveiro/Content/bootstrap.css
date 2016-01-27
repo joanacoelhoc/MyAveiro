@@ -3474,15 +3474,19 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 10px 15px;
+  padding: 2px 15px;
+
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
-  text-decoration: none;
-  background-color: #eeeeee;
+  /*text-decoration: none;
+  background-color: #eeeeee;*/
+    padding-left: 25px;
 }
 .nav > li.disabled > a {
   color: #999999;
+  padding-left: 0px;
+  padding-top: 20px;
 }
 .nav > li.disabled > a:hover,
 .nav > li.disabled > a:focus {
@@ -3589,6 +3593,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-pills > li.active > a:focus {
   color: #ffffff;
   background-color:  #c1565e; /*#427893;*/
+
 }
 .nav-stacked > li {
   float: none;
@@ -5856,4 +5861,13 @@ button.close {
 }
 .affix {
   position: fixed;
+}
+.sidebar {
+  margin-top: 40px;
+}
+
+.sidebar ul {
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid #cccccc;
 }
