@@ -1,0 +1,82 @@
+﻿@model IEnumerable<MyAveiro.Models.Utilities>
+@{
+    ViewBag.Title = "Police";
+}
+<div class="container">
+    <div class="row">
+        @Html.Partial("~/Views/Shared/_SideBar.cshtml")
+
+        <div class="col-md-9 col-sm-8">
+            <h1 class="page-header">
+                Police
+                <small> Details</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li>
+                    @Html.ActionLink("Main Page", "Index", "Home")
+
+                </li>
+            </ol>
+
+            <hr>
+            <p class="titulo2">@Html.ActionLink("FALTA", "Create", "Utilities")</p>
+            <hr>
+
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayName("Name")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Acronym")
+                    </th>
+                    <td>
+                        @Html.DisplayName("Address")
+                    </td>
+                    <td>
+                        @Html.DisplayName("Phone number")
+                    </td>
+                    <td>
+                        @Html.DisplayName("Email")
+                    </td>
+                    <td>
+                        @Html.DisplayName("URL")
+                    </td>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CompleteName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Acronym)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AddressNumber)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PhoneNumber)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.URLSite)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Details", "Details", new { id = item.ID })
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
