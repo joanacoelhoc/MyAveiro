@@ -3493,7 +3493,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #999999;
   text-decoration: none;
   background-color: transparent;
-  cursor: not-allowed;
+  cursor:zoom-in;
 }
 .nav .open > a,
 .nav .open > a:hover,

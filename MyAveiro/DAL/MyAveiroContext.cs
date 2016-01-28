@@ -21,6 +21,12 @@ namespace  MyAveiro.DAL
         }
 
         public DbSet<Utilities> Utilities { get; set; }
+
         public DbSet<UtilitiesTypes> UtilitiesTypes { get; set; }
+        public DbSet<RestTypes> RestTypes { get; set; }
+        public DbSet<FoodTypes> FoodTypes { get; set; }
+        public DbSet<FunTypes> FunTypes { get; set; }
+        public DbSet<EventTypes> EventTypes { get; set; }
+
     }
 }

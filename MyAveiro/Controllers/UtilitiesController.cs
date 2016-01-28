@@ -24,19 +24,43 @@ namespace MyAveiro.Controllers
         // GET: Utilities/Emergency
         public ActionResult Emergency()
         {
-            return View(db.Utilities.Where(i => i.UtilityID == 1).ToList());
+            return View(db.Utilities.Where(i => i.UtilitiesTypes.UtilityTypeName == "Emergency").ToList());
         }
 
         // GET: Utilities/Transports
         public ActionResult Transports()
         {
-            return View(db.Utilities.Where(i=>i.UtilityID==2).ToList());
+            return View(db.Utilities.Where(i => i.UtilitiesTypes.UtilityTypeName == "Transport").ToList());
         }
 
         // GET: Utilities/Police
         public ActionResult Police()
         {
-            return View(db.Utilities.Where(i => i.UtilityID == 3).ToList());
+            return View(db.Utilities.Where(i => i.UtilitiesTypes.UtilityTypeName == "Police").ToList());
+        }
+
+        // GET: Utilities/Rest
+        public ActionResult Rest()
+        {
+            return View(db.Utilities.Where(i => i.UtilitiesTypes.UtilityTypeName == "Rest").ToList());
+        }
+
+        // GET: Utilities/Food
+        public ActionResult Food()
+        {
+            return View(db.Utilities.Where(i => i.UtilitiesTypes.UtilityTypeName == "Food").ToList());
+        }
+
+        // GET: Utilities/Fun
+        public ActionResult Fun()
+        {
+            return View(db.Utilities.Where(i=>i.UtilitiesTypes.UtilityTypeName=="Fun").ToList());
+        }
+
+        // GET: Utilities/Events
+        public ActionResult Events()
+        {
+            return View(db.Utilities.Where(i => i.UtilitiesTypes.UtilityTypeName == "Event").ToList());
         }
 
         // GET: Utilities/Details/5

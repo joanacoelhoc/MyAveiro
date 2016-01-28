@@ -30,18 +30,18 @@
                     <th>
                         @Html.DisplayName("Acronym")
                     </th>
-                    <td>
+                    <th>
                         @Html.DisplayName("Address")
-                    </td>
-                    <td>
+                    </th>
+                    <th>
                         @Html.DisplayName("Phone number")
-                    </td>
-                    <td>
+                    </th>
+                    <th>
                         @Html.DisplayName("Email")
-                    </td>
-                    <td>
+                    </th>
+                    <th>
                         @Html.DisplayName("URL")
-                    </td>
+                    </th>
                     <th></th>
                 </tr>
 
@@ -50,13 +50,13 @@
                     <tr>
 
                         <td>
-                            @Html.DisplayFor(modelItem => item.CompleteName)
+                            @Html.DisplayFor(modelItem => item.Name)
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.Acronym)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.AddressNumber)
+                            @Html.DisplayFor(modelItem => item.Address)
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.PhoneNumber)

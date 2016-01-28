@@ -5,9 +5,9 @@ using System.Web;
 
 namespace MyAveiro.Models
 {
-    public class UtilitiesTypes
+    public class FoodTypes
     {
         public int ID { get; set; }
-        public string UtilityTypeName { get; set; }
+        public string FoodTypeName { get; set; }
     }
 }

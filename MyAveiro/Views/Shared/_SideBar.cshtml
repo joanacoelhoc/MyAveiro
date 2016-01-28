@@ -12,7 +12,8 @@
         </li>
        
         <li class="disabled">
-            <a href="#">Rest in Aveiro</a>
+            <a href="#">@*Rest in Aveiro*@</a>
+            @Html.ActionLink("Rest in Aveiro", "Rest", "Utilities")
         </li>
         <li>
             @Html.ActionLink("Hotels", "Index", "Home")
@@ -21,7 +22,8 @@
             @Html.ActionLink("Hostels", "Index", "Home")
         </li>
         <li class="disabled">
-            <a href="#">Food in Aveiro</a>
+            @*<a href="#">Food in Aveiro</a>*@
+            @Html.ActionLink("Food in Aveiro", "Food", "Utilities")
         </li>
         <li>
             @Html.ActionLink("Restaurantes", "Index", "Home")
@@ -30,7 +32,8 @@
             @Html.ActionLink("Places", "Index", "Home")
         </li>
         <li class="disabled">
-            <a href="#">Fun in Aveiro</a>
+            @*<a href="#">Fun in Aveiro</a>*@
+            @Html.ActionLink("Fun in Aveiro", "Fun", "Utilities")
         </li>
         <li>
             @Html.ActionLink("Travel", "Index", "Home")

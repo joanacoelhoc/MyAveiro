@@ -12,10 +12,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.UtilityID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CompleteName)
+            @Html.DisplayNameFor(model => model.Name)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Acronym)
@@ -24,7 +21,7 @@
             @Html.DisplayNameFor(model => model.PhoneNumber)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.AddressNumber)
+            @Html.DisplayNameFor(model => model.Address)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Email)
@@ -39,10 +36,9 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.UtilityID)
-        </td>
+
         <td>
-            @Html.DisplayFor(modelItem => item.CompleteName)
+            @Html.DisplayFor(modelItem => item.Name)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Acronym)
@@ -51,7 +47,7 @@
             @Html.DisplayFor(modelItem => item.PhoneNumber)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.AddressNumber)
+            @Html.DisplayFor(modelItem => item.Address)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Email)

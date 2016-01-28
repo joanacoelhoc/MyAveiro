@@ -124,12 +124,16 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201601271545073_InitialCreate.cs" />
-    <Compile Include="Migrations\201601271545073_InitialCreate.Designer.cs">
-      <DependentUpon>201601271545073_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201601281611570_InitialDB.cs" />
+    <Compile Include="Migrations\201601281611570_InitialDB.Designer.cs">
+      <DependentUpon>201601281611570_InitialDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\EventTypes.cs" />
+    <Compile Include="Models\FunTypes.cs" />
+    <Compile Include="Models\FoodTypes.cs" />
     <Compile Include="Models\Utilities.cs" />
+    <Compile Include="Models\RestTypes.cs" />
     <Compile Include="Models\UtilitiesTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -179,6 +183,10 @@
     <Content Include="Views\Utilities\Transports.cshtml" />
     <Content Include="Views\Utilities\Emergency.cshtml" />
     <Content Include="Views\Utilities\Police.cshtml" />
+    <Content Include="Views\Utilities\Rest.cshtml" />
+    <Content Include="Views\Utilities\Food.cshtml" />
+    <Content Include="Views\Utilities\Fun.cshtml" />
+    <Content Include="Views\Utilities\Events.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -191,8 +199,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201601271545073_InitialCreate.resx">
-      <DependentUpon>201601271545073_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201601281611570_InitialDB.resx">
+      <DependentUpon>201601281611570_InitialDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
