@@ -13,6 +13,7 @@ namespace MyAveiro.Controllers
 {
     public class UtilitiesTypesController : Controller
     {
+        
 
     }
 }

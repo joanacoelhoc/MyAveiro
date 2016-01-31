@@ -26,5 +26,10 @@ namespace MyAveiro.Controllers
 
             return View();
         }
+
+        public ActionResult Aveiro()
+        {
+            return View();
+        }
     }
 }

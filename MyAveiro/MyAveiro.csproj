@@ -117,7 +117,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\EventTypesController.cs" />
+    <Compile Include="Controllers\FoodTypesController.cs" />
+    <Compile Include="Controllers\FunTypesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RestTypesController.cs" />
     <Compile Include="Controllers\UtilitiesController.cs" />
     <Compile Include="Controllers\UtilitiesTypesController.cs" />
     <Compile Include="DAL\MyAveiroContext.cs" />
@@ -127,6 +131,10 @@
     <Compile Include="Migrations\201601281611570_InitialDB.cs" />
     <Compile Include="Migrations\201601281611570_InitialDB.Designer.cs">
       <DependentUpon>201601281611570_InitialDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601312059239_Migration2.cs" />
+    <Compile Include="Migrations\201601312059239_Migration2.Designer.cs">
+      <DependentUpon>201601312059239_Migration2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\EventTypes.cs" />
@@ -138,6 +146,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\alemao1.jpg" />
     <Content Include="Images\av1.jpg" />
     <Content Include="Images\av2.jpg" />
     <Content Include="Images\av3.jpg" />
@@ -148,6 +157,30 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\buga.jpg" />
+    <Content Include="Images\buga1.jpg" />
+    <Content Include="Images\caisMadeirense.jpg" />
+    <Content Include="Images\caisMadeirense2.jpg" />
+    <Content Include="Images\caisMadeirense3.jpg" />
+    <Content Include="Images\costaNova1.jpg" />
+    <Content Include="Images\costaNova2.jpg" />
+    <Content Include="Images\dunas.jpg" />
+    <Content Include="Images\dunas1.jpg" />
+    <Content Include="Images\dunas2.jpg" />
+    <Content Include="Images\dunas3.jpg" />
+    <Content Include="Images\estacaoLuz.jpg" />
+    <Content Include="Images\estacaoLuz2.jpg" />
+    <Content Include="Images\farol.jpg" />
+    <Content Include="Images\hostel1.png" />
+    <Content Include="Images\hotel1.jpg" />
+    <Content Include="Images\meliaria.jpg" />
+    <Content Include="Images\meliaria1.jpg" />
+    <Content Include="Images\meliaria2.jpg" />
+    <Content Include="Images\museuIlhavo.jpg" />
+    <Content Include="Images\salinas.jpg" />
+    <Content Include="Images\salpoente.jpg" />
+    <Content Include="Images\salpoente1.jpg" />
+    <Content Include="Images\viagemMoliceiro.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -187,6 +220,23 @@
     <Content Include="Views\Utilities\Food.cshtml" />
     <Content Include="Views\Utilities\Fun.cshtml" />
     <Content Include="Views\Utilities\Events.cshtml" />
+    <Content Include="Views\RestTypes\Hostels.cshtml" />
+    <Content Include="Views\RestTypes\Hotels.cshtml" />
+    <Content Include="Views\RestTypes\HostelDetails.cshtml" />
+    <Content Include="Views\RestTypes\HotelDetails.cshtml" />
+    <Content Include="Views\Home\Aveiro.cshtml" />
+    <Content Include="Views\FoodTypes\Restaurants.cshtml" />
+    <Content Include="Views\EventTypes\Exhibitions.cshtml" />
+    <Content Include="Views\EventTypes\ExhibitionsDetails.cshtml" />
+    <Content Include="Views\FoodTypes\RestaurantsDetails.cshtml" />
+    <Content Include="Views\FunTypes\Museum.cshtml" />
+    <Content Include="Views\FunTypes\MuseumDetails.cshtml" />
+    <Content Include="Views\FunTypes\Beach.cshtml" />
+    <Content Include="Views\FunTypes\BeachDetails.cshtml" />
+    <Content Include="Views\FunTypes\OutdoorActivities.cshtml" />
+    <Content Include="Views\FunTypes\OutdoorActivitiesDetails.cshtml" />
+    <Content Include="Views\FunTypes\BarsPubs.cshtml" />
+    <Content Include="Views\FunTypes\BarsPubsDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -201,6 +251,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201601281611570_InitialDB.resx">
       <DependentUpon>201601281611570_InitialDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601312059239_Migration2.resx">
+      <DependentUpon>201601312059239_Migration2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

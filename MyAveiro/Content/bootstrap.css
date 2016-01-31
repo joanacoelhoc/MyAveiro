@@ -626,7 +626,7 @@ dd {
 @media (min-width: 768px) {
   .dl-horizontal dt {
     float: left;
-    width: 160px;
+    width: 70px;
     clear: left;
     text-align: right;
     overflow: hidden;
@@ -634,7 +634,7 @@ dd {
     white-space: nowrap;
   }
   .dl-horizontal dd {
-    margin-left: 180px;
+    margin-left: 90px;
   }
 }
 abbr[title],
@@ -4140,10 +4140,20 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   display: inline-block;
 }
 .breadcrumb > li + li:before {
-  content: "/\00a0";
-  padding: 0 5px;
-  color: #cccccc;
+  content: '\00BB';
+  padding: 10px 5px;
+  color: #b7000f;
+  font-size:30px;
 }
+.breadcrumb >  img {
+    padding: 20px;
+    /*padding-left:50px;
+        padding-right:50px;*/
+    /*margin: 10px 10px;*/
+  height: 100%;
+  width:100%;
+}
+
 .breadcrumb > .active {
   color: #999999;
 }
