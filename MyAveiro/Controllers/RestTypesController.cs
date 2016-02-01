@@ -77,21 +77,21 @@ namespace MyAveiro.Controllers
             return View(utilities);
         }
 
-        public ActionResult ImagesRepositoryPartial(string Acronym)
-        {
-             //= "Buga";
-            List<String> listImagemRepository = GetAvailableImagesFromRepository(Acronym);
-            return PartialView("_ImageDetails", listImagemRepository);
+        //public ActionResult ImagesRepositoryPartial(string Acronym)
+        //{
+        //     //= "Buga";
+        //    List<String> listImagemRepository = GetAvailableImagesFromRepository(Acronym);
+        //    return PartialView("_ImageDetails", listImagemRepository);
 
-        }
+        //}
 
-        public List<string> GetAvailableImagesFromRepository(string Acronym)
-        {
-            if (Acronym != null && Acronym != string.Empty)
-                return db.ImagesRepository.Where(i => i.Utilities.Acronym == Acronym).Select(i => i.URLImage).ToList();
-            else
-                return new List<string>();
-        }
+        //public List<string> GetAvailableImagesFromRepository(string Acronym)
+        //{
+        //    if (Acronym != null && Acronym != string.Empty)
+        //        return db.ImagesRepository.Where(i => i.Utilities.Acronym == Acronym).Select(i => i.URLImage).ToList();
+        //    else
+        //        return new List<string>();
+        //}
 
        
 	}

@@ -23,19 +23,10 @@
                     <th>
                         @Html.DisplayName("Name")
                     </th>
-                    @*<th>
-                        @Html.DisplayName("Acronym")
-                    </th>*@
                     <th>
                         @Html.DisplayName("Address")
                     </th>
                     <th></th>
-                    @*<th>
-                        @Html.DisplayName("Phone number")
-                    </th>
-                    <th>
-                        @Html.DisplayName("Email")
-                    </th>*@
                     <th>
                         @Html.DisplayName("Web Site")
                     </th>
@@ -49,23 +40,14 @@
                         <td>
                             @Html.DisplayFor(modelItem => item.Name)
                         </td>
-                        @*<td>
-                            @Html.DisplayFor(modelItem => item.Acronym)
-                        </td>*@
                         <td>
                             @Html.DisplayFor(modelItem => item.Address)
                         </td>
                         <td>
-                            <img src="@Url.Content(item.URLImg)" alt="Av1" width="150px" height="100px">
+                            <img src="@Url.Content(item.URLImg)" alt="Not found" width="150px" height="100px">
                         </td>
-                        @*<td>
-                            @Html.DisplayFor(modelItem => item.PhoneNumber)
-                        </td>
+
                         <td>
-                            @Html.DisplayFor(modelItem => item.Email)
-                        </td>*@
-                        <td>
-                            @*@Html.DisplayFor(modelItem => item.URLSite)*@
                             <a href="@Url.Content(item.URLSite)">Visit</a>
 
                         </td>

@@ -42,7 +42,8 @@ namespace MyAveiro.Controllers
         // GET: Utilities/Rest
         public ActionResult Rest()
         {
-            return View(db.Utilities.Where(i => i.UtilitiesTypes.UtilityTypeName == "Rest").ToList());
+
+            return View(db.Utilities.Where(i => i.UtilitiesTypes.UtilityTypeName == "Rest").ToList().Distinct());
         }
 
         // GET: Utilities/Food
@@ -85,6 +86,21 @@ namespace MyAveiro.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+         public ActionResult ImagesRepositoryPartial(string Acronym)
+        {
+            List<String> listImagemRepository = GetAvailableImagesFromRepository(Acronym);
+            return PartialView("_ImageDetails", listImagemRepository);
+
+        }
+
+        public List<string> GetAvailableImagesFromRepository(string Acronym)
+        {
+            if (Acronym != null && Acronym != string.Empty)
+                return db.ImagesRepository.Where(i => i.Utilities.Acronym == Acronym).Select(i => i.URLImage).ToList();
+            else
+                return new List<string>();
         }
     }
 }

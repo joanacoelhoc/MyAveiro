@@ -1,7 +1,61 @@
-﻿
+﻿@model IEnumerable<MyAveiro.Models.Utilities>
 @{
-    ViewBag.Title = "Museum";
+    ViewBag.Title = "Museum List";
 }
+<div class="container">
+    <div class="row">
+        @Html.Partial("~/Views/Shared/_SideBar.cshtml")
 
-<h2>Museum</h2>
+        <div class="col-md-9 col-sm-8">
+            <h1 class="page-header">
+                Museum
+                <small> List</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li>
+                    @Html.ActionLink("Fun Page", "Fun", "Utilities")
+                </li>
+            </ol>
 
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayName("Name")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Address")
+                    </th>
+                    <th></th>
+                    <th>
+                        @Html.DisplayName("Web Site")
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Address)
+                        </td>
+                        <td>
+                            <img src="@Url.Content(item.URLImg)" alt="Not found" width="150px" height="100px">
+                        </td>
+
+                        <td>
+                            <a href="@Url.Content(item.URLSite)">Visit</a>
+
+                        </td>
+                        <td>
+                            @Html.ActionLink("Details", "Details", "FunTypes", new { id = item.ID }, null)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>

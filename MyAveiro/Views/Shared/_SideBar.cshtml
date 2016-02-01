@@ -2,17 +2,12 @@
     <ul class="nav nav-stacked nav-pills">
         
         <li class="disabled">
-            <a href="#">Aveiro</a>
+            @Html.ActionLink("Rest in Aveiro", "Index", "Home")
         </li>
         <li>
             @Html.ActionLink("Interest Points", "Aveiro", "Home")
         </li>
-        <li>
-            @Html.ActionLink("Aveiro as distrito", "Index", "Home")
-        </li>
-       
         <li class="disabled">
-            <a href="#">@*Rest in Aveiro*@</a>
             @Html.ActionLink("Rest in Aveiro", "Rest", "Utilities")
         </li>
         <li>
@@ -22,33 +17,26 @@
             @Html.ActionLink("Hostel", "Hostels", "RestTypes")
         </li>
         <li class="disabled">
-            @*<a href="#">Food in Aveiro</a>*@
             @Html.ActionLink("Food in Aveiro", "Food", "Utilities")
         </li>
         <li>
-            @Html.ActionLink("Restaurantes", "Index", "Home")
-        </li>
-        <li>
-            @Html.ActionLink("Places", "Index", "Home")
+            @Html.ActionLink("Restaurants", "Restaurants", "FoodTypes")
         </li>
         <li class="disabled">
-            @*<a href="#">Fun in Aveiro</a>*@
             @Html.ActionLink("Fun in Aveiro", "Fun", "Utilities")
         </li>
         <li>
-            @Html.ActionLink("Travel", "Index", "Home")
+            @Html.ActionLink("Bars & Pubs", "BarsPubs", "FunTypes")
         </li>
         <li>
-            @Html.ActionLink("Night", "Index", "Home")
+            @Html.ActionLink("Beach", "Beach", "FunTypes")
         </li>
-        <li class="disabled">
-            <a href="#">Ajuda</a>
-        </li>
-        @*<li>
-            @Html.ActionLink("Contactos", "Contact", "Home")
-        </li>*@
         <li>
-            @Html.ActionLink("FAQ", "About", "Home")
+            @Html.ActionLink("Museum", "Museum", "FunTypes")
         </li>
+        <li>
+            @Html.ActionLink("Outdoor Activities", "OutdoorActivities", "FunTypes")
+        </li>
+        
     </ul>
 </div>

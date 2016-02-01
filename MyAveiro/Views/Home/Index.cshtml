@@ -1,4 +1,6 @@
-﻿@{
+﻿@model System.Collections.Generic.IEnumerable<string>
+
+@{
     ViewBag.Title = "Index";
 }
 <div class="container">
@@ -11,48 +13,40 @@
             </h1>
 
             <hr>
-            <p class="titulo1"><i class="fa fa-clock-o "></i>Something</p>
+            <p class="titulo1"><i class="fa fa-clock-o "></i>Want to know what Aveiro has to offer? </p>
 
-
-            <!-- Region Carousel -->
-            <div id="myCarousel" class="carousel" data-ride="carousel">
+            <!-- Icones used in the carousel -->
+            <div id="myCarousel" class="carousel" data-ride="carousel" style="margin-left:20px; " >
                 <!-- Icones used in the carousel -->
                 <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                    <li data-target="#myCarousel" data-slide-to="3"></li>
-                    <li data-target="#myCarousel" data-slide-to="4"></li>
-                    <li data-target="#myCarousel" data-slide-to="5"></li>
+                    @*<li data-target="#myCarousel" data-slide-to="3"></li>*@
+                    @for (int i = 0; i < 1; i++)
+                    {
+                        <li data-target="#myCarousel" data-slide-to="@i" class="active"></li>
+                    }
+                    @for (int i = 1; i < Model.Count(); i++)
+                    {
+                        <li data-target="#myCarousel" data-slide-to="@i"></li>
+                    }
                 </ol>
 
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <img src="~/Images/av1.jpg" alt="Av1">
-                    </div>
 
-                    <div class="item">
-                        <img src="~/Images/av2.jpg" alt="Av2">
-                    </div>
-
-                    <div class="item">
-                        <img src="~/Images/av3.jpg" alt="Av3">
-                    </div>
-
-                    <div class="item">
-                        <img src="~/Images/av4.jpg" alt="Av4">
-                    </div>
-
-                    <div class="item">
-                        <img src="~/Images/av5.jpg" alt="Av5">
-                    </div>
-
-                    <div class="item">
-                        <img src="~/Images/av6.jpg" alt="Av6">
-                    </div>
+                    @foreach (var item in Model)
+                    {
+                        <div class="item active">
+                            <img src="@Url.Content(@item)" >
+                        </div>
+                        break;
+                    }
+                    @for (int i = 1; i < Model.Count(); i++)
+                    {
+                        <div class="item ">
+                            <img src="@Url.Content(Model.ElementAt(i)) ">
+                        </div>
+                    }
                 </div>
-
                 <!-- Left and right controls -->
                 <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -63,13 +57,7 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-            <!-- Endregion Carousel -->
 
-            <hr>
-
-
-            <hr>
-            <p class="titulo1"><i class="fa fa-clock-o "></i>Something</p>
             <hr>
 
 

@@ -1,0 +1,127 @@
+﻿@model MyAveiro.Models.Utilities
+@{
+    ViewBag.Title = "Fun Details";
+}
+
+<div class="container">
+    <div class="row">
+        @Html.Partial("~/Views/Shared/_SideBar.cshtml")
+
+        <div class="col-md-9 col-sm-8">
+            <h1 class="page-header">
+                Fun
+                <small> Details</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li>
+                    @Html.ActionLink("Fun Page", "FunTypes", "Utilities")
+
+                </li>
+            </ol>
+
+            <table class="table">
+                <tr>
+                    <th style="font-size:20px   ">
+                        @Html.DisplayFor(model => model.Name)
+                    </th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <br />
+                        <br />
+                        <!--Region DATA-->
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayName("Address")
+                            </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.Address)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayName("Contact")
+                            </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.PhoneNumber)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Email)
+                            </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.Email)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayName("Website")
+                            </dt>
+                            <dd>
+                                <a href="@Url.Content(Model.URLSite)">Visit!</a>
+                            </dd>
+                        </dl>
+                        <!--Endregion -->
+                    </td>
+                    <td>
+                        <!--Region MAP-->
+                        <div id="myModalLabel" data-id="@Model.Address,Portugal"></div>
+
+                        <div class="modal-body">
+                            <div id="map-canvas" style="width: 300px; height: 300px">map canvas</div>
+                        </div>
+                        <!--EndRegion MAP-->
+                    </td>
+
+
+                </tr>
+
+                <tr>
+                    <th>
+                        Gallery
+                    </th>
+                    <td>
+                        @Html.Action("ImagesRepositoryPartial", "Utilities", new { Acronym = Model.Acronym })
+                    </td>
+
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    initialize();
+    codeAddress();
+
+    var geocoder;
+    var map;
+
+    function initialize() {
+        geocoder = new google.maps.Geocoder();
+        var latlng = new google.maps.LatLng(-37.6568122, 145.4471613);
+        var myOptions = {
+            zoom: 14,
+            center: latlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
+    }
+
+    function codeAddress() {
+        var address = $('#myModalLabel').attr('data-id');
+        geocoder.geocode({ 'address': address }, function (results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                map.setCenter(results[0].geometry.location);
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: results[0].geometry.location
+                });
+            } else {
+                alert("Geocode was not successful for the following reason: " + status);
+            }
+        });
+    }
+    google.maps.event.addDomListener(window, "load", codeAddress);
+</script>

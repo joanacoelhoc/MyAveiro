@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<MyAveiro.Models.Utilities>
 @{
-    ViewBag.Title = "Emergency";
+    ViewBag.Title = "Emergency List";
 }
 <div class="container">
     <div class="row">
@@ -8,8 +8,8 @@
 
         <div class="col-md-9 col-sm-8">
             <h1 class="page-header">
-               Emergency
-                <small> Details</small>
+                Emergency
+                <small> List</small>
             </h1>
             <ol class="breadcrumb">
                 <li>
@@ -18,29 +18,17 @@
                 </li>
             </ol>
 
-            <hr>
-            <p class="titulo2">@Html.ActionLink("FALTA", "Create", "Utilities")</p>
-            <hr>
-
             <table class="table">
                 <tr>
                     <th>
                         @Html.DisplayName("Name")
                     </th>
                     <th>
-                        @Html.DisplayName("Acronym")
-                    </th>  
-                    <th>
                         @Html.DisplayName("Address")
                     </th>
+                    <th></th>
                     <th>
-                        @Html.DisplayName("Phone number")
-                    </th>
-                    <th>
-                        @Html.DisplayName("Email")
-                    </th>
-                    <th>
-                        @Html.DisplayName("URL")
+                        @Html.DisplayName("Web Site")
                     </th>
                     <th></th>
                 </tr>
@@ -48,27 +36,23 @@
                 @foreach (var item in Model)
                 {
                     <tr>
-                       
+
                         <td>
                             @Html.DisplayFor(modelItem => item.Name)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Acronym)
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.Address)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.PhoneNumber)
+                            <img src="@Url.Content(item.URLImg)" alt="Not found" width="150px" height="100px">
+                        </td>
+
+                        <td>
+                            <a href="@Url.Content(item.URLSite)">Visit</a>
+
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Email)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.URLSite)
-                        </td>
-                        <td>
-                            @Html.ActionLink("Details", "Details", new { id = item.ID })
+                            @Html.ActionLink("Details", "Details", "Utilities", new { id = item.ID }, null)
                         </td>
                     </tr>
                 }
@@ -76,7 +60,3 @@
         </div>
     </div>
 </div>
-
-
-
-
