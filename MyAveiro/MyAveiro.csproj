@@ -136,7 +136,12 @@
     <Compile Include="Migrations\201601312059239_Migration2.Designer.cs">
       <DependentUpon>201601312059239_Migration2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602011444400_Migration3.cs" />
+    <Compile Include="Migrations\201602011444400_Migration3.Designer.cs">
+      <DependentUpon>201602011444400_Migration3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\ImagesRepository.cs" />
     <Compile Include="Models\EventTypes.cs" />
     <Compile Include="Models\FunTypes.cs" />
     <Compile Include="Models\FoodTypes.cs" />
@@ -177,6 +182,8 @@
     <Content Include="Images\meliaria1.jpg" />
     <Content Include="Images\meliaria2.jpg" />
     <Content Include="Images\museuIlhavo.jpg" />
+    <Content Include="Images\royal.jpg" />
+    <Content Include="Images\royal2.jpg" />
     <Content Include="Images\salinas.jpg" />
     <Content Include="Images\salpoente.jpg" />
     <Content Include="Images\salpoente1.jpg" />
@@ -224,7 +231,6 @@
     <Content Include="Views\RestTypes\Hotels.cshtml" />
     <Content Include="Views\RestTypes\HostelDetails.cshtml" />
     <Content Include="Views\RestTypes\HotelDetails.cshtml" />
-    <Content Include="Views\Home\Aveiro.cshtml" />
     <Content Include="Views\FoodTypes\Restaurants.cshtml" />
     <Content Include="Views\EventTypes\Exhibitions.cshtml" />
     <Content Include="Views\EventTypes\ExhibitionsDetails.cshtml" />
@@ -237,6 +243,9 @@
     <Content Include="Views\FunTypes\OutdoorActivitiesDetails.cshtml" />
     <Content Include="Views\FunTypes\BarsPubs.cshtml" />
     <Content Include="Views\FunTypes\BarsPubsDetails.cshtml" />
+    <Content Include="Views\Home\Aveiro.cshtml" />
+    <Content Include="Views\RestTypes\Details.cshtml" />
+    <Content Include="Views\RestTypes\_ImageDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -254,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201601312059239_Migration2.resx">
       <DependentUpon>201601312059239_Migration2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602011444400_Migration3.resx">
+      <DependentUpon>201602011444400_Migration3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

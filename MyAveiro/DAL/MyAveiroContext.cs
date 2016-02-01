@@ -27,6 +27,7 @@ namespace  MyAveiro.DAL
         public DbSet<FoodTypes> FoodTypes { get; set; }
         public DbSet<FunTypes> FunTypes { get; set; }
         public DbSet<EventTypes> EventTypes { get; set; }
+        public DbSet<ImagesRepository> ImagesRepository { get; set; }
 
     }
 }

@@ -26,5 +26,6 @@ namespace MyAveiro.Models
         public virtual EventTypes EventTypes { get; set; }
 
 
+
     }
 }

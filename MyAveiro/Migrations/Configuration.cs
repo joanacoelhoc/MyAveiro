@@ -91,6 +91,7 @@ namespace MyAveiro.Migrations
 
             #endregion
 
+
             #region UTILITIES
             var utilities = new List<Utilities>
             { 
@@ -112,25 +113,25 @@ namespace MyAveiro.Migrations
                #endregion
                 
                 #region Rest 
-                new Utilities{Name="Melia Ria Hotel",Acronym="N/A",Address="Cais da Fonte Nova, Lote 5 3810-200 Aveiro",PhoneNumber="234401000",Email="melia.ria@meliaportugal.com", URLSite="http://www.meliaria.com/pt-pt/home-2.aspx?areaId=31", URLImg="~/Images/meliaria.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Rest"),  RestTypes = restTypes.SingleOrDefault(x=>x.RestTypeName=="Hotel")},
-                new Utilities{Name="Royal Guesthouse",Acronym="N/A",Address="Rua de São Sebastião Nº9, 3810-187 Aveiro",PhoneNumber="965895878",Email="ct.avr@gnr.pt", URLSite="https://www.facebook.com/Royal-Guesthouse-555307391240256/", URLImg="~/Images/av1.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Rest"),  RestTypes = restTypes.SingleOrDefault(x=>x.RestTypeName=="Hostel")},
+                new Utilities{Name="Melia Ria Hotel",Acronym="MeliaRia",Address="Cais da Fonte Nova, Lote 5 3810-200 Aveiro",PhoneNumber="234401000",Email="melia.ria@meliaportugal.com", URLSite="http://www.meliaria.com/pt-pt/home-2.aspx?areaId=31", URLImg="~/Images/meliaria.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Rest"),  RestTypes = restTypes.SingleOrDefault(x=>x.RestTypeName=="Hotel")},
+                new Utilities{Name="Royal Guesthouse",Acronym="RoyalGuesthouse",Address="Rua de São Sebastião Nº9, 3810-187 Aveiro",PhoneNumber="965895878",Email="ct.avr@gnr.pt", URLSite="https://www.facebook.com/Royal-Guesthouse-555307391240256/", URLImg="~/Images/av1.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Rest"),  RestTypes = restTypes.SingleOrDefault(x=>x.RestTypeName=="Hostel")},
                 #endregion
                 
                 #region Food 
-                new Utilities{Name="Salpoente",Acronym="N/A",Address="Cais de S.Roque 83, 3800-256, Aveiro 3800",PhoneNumber="915138619",Email="salpoente@salpoente.pt", URLSite="http://salpoente.pt/", URLImg="~/Images/salpoente2.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Food"),  FoodTypes = foodTypes.SingleOrDefault(x=>x.FoodTypeName=="Restaurant")},
-                new Utilities{Name="Cais Madeirense",Acronym="N/A",Address="Sitio do Cais dos Botirões,nº31 Aveiro",PhoneNumber="929058482",Email="N/A", URLSite="https://www.facebook.com/caismadeirenseaveiro/", URLImg="~/Images/caisMadeirense.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Food"),  FoodTypes = foodTypes.SingleOrDefault(x=>x.FoodTypeName=="Restaurant")},
-                new Utilities{Name="Alemão",Acronym="Alemão",Address="Rua 5 - Urb. da boa Hora - Praia da Vagueira 3840 GAFANHA BOA HORA, Portugal",PhoneNumber="234797465",Email="N/A", URLSite="https://www.facebook.com/pages/Restaurante-Ei-Alem%C3%A3o-/176621399065002", URLImg="~/Images/alemao.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Food"),  FoodTypes = foodTypes.SingleOrDefault(x=>x.FoodTypeName=="Restaurant")},
+                new Utilities{Name="Salpoente",Acronym="Salpoente",Address="Cais de S.Roque 83, 3800-256, Aveiro 3800",PhoneNumber="915138619",Email="salpoente@salpoente.pt", URLSite="http://salpoente.pt/", URLImg="~/Images/salpoente2.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Food"),  FoodTypes = foodTypes.SingleOrDefault(x=>x.FoodTypeName=="Restaurant")},
+                new Utilities{Name="Cais Madeirense",Acronym="Cais",Address="Sitio do Cais dos Botirões,nº31 Aveiro",PhoneNumber="929058482",Email="N/A", URLSite="https://www.facebook.com/caismadeirenseaveiro/", URLImg="~/Images/caisMadeirense.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Food"),  FoodTypes = foodTypes.SingleOrDefault(x=>x.FoodTypeName=="Restaurant")},
+                new Utilities{Name="Alemão",Acronym="Alemao",Address="Rua 5 - Urb. da boa Hora - Praia da Vagueira 3840 GAFANHA BOA HORA, Portugal",PhoneNumber="234797465",Email="N/A", URLSite="https://www.facebook.com/pages/Restaurante-Ei-Alem%C3%A3o-/176621399065002", URLImg="~/Images/alemao.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Food"),  FoodTypes = foodTypes.SingleOrDefault(x=>x.FoodTypeName=="Restaurant")},
 
                 #endregion
                 
                 #region Fun 
-                new Utilities{Name="Estação da Luz",Acronym="N/A",Address="Rua direita, Quintas 3810 Aveiro",PhoneNumber="234943979",Email="porteirovirtual@estacaodaluz.pt", URLSite="https://www.facebook.com/estacaodaluz", URLImg="~/Images/estacaoLuz.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Fun"),  FunTypes = funTypes.SingleOrDefault(x=>x.FunTypeName=="Bars & Pubs")},
-                new Utilities{Name="Praia da Costa Nova",Acronym="N/A",Address="R. da Quinta do Cravo 17, Aveiro",PhoneNumber="N/A",Email="N/A",URLSite="N/A", URLImg="~/Images/costaNova1.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Fun"),  FunTypes = funTypes.SingleOrDefault(x=>x.FunTypeName=="Beach")},
-                new Utilities{Name="Viagem Moliceiro",Acronym="Viva a Ria",Address="Jardim do Rossio, Aveiro ",PhoneNumber="969008687",Email="vivaaria@gmail.com",URLSite="http://www.vivaaria.com/category/moliceiros-2/na-cidade-de-aveiro/", URLImg="~/Images/viagemMoliceiro.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Fun"),  FunTypes = funTypes.SingleOrDefault(x=>x.FunTypeName=="Outdoor activities")},
-                new Utilities{Name="Salinas",Acronym="N/A",Address="R. da Pega 69, 3810-164 Aveiro, Portugal",PhoneNumber="N/A",Email="N/A",URLSite="http://www.visitcentrodeportugal.com.pt/pt/as-salinas-de-aveiro/", URLImg="~/Images/salinas.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Fun"),  FunTypes = funTypes.SingleOrDefault(x=>x.FunTypeName=="Outdoor activities")},
-                new Utilities{Name="Farol da Barra",Acronym="N/A",Address="Largo do Farol, Praia da Barra 3830-753 Gafanha da Nazaré, Portugal",PhoneNumber="234369271",Email="N/A",URLSite="http://www.cm-ilhavo.pt/pages/910", URLImg="~/Images/farol.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Fun"),  FunTypes = funTypes.SingleOrDefault(x=>x.FunTypeName=="Beach")},
-                new Utilities{Name="Museu Maritimo de Ilhavo",Acronym="N/A",Address="Avenida Dr. Rocha Madahíl 3830-193 Ílhavo Portugal",PhoneNumber="234329990",Email="museuilhavo@cm-ilhavo.pt",URLSite="http://www.museumaritimo.cm-ilhavo.pt/", URLImg="~/Images/museuIlhavo.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Fun"),  FunTypes = funTypes.SingleOrDefault(x=>x.FunTypeName=="Museum")},
-                new Utilities{Name="Dunas de São Jacinto",Acronym="N/A",Address="Reserva Natural das Dunas de S. Jacinto. 3800 Aveiro",PhoneNumber="234331282",Email="angelina.barbosa@icnf.pt",URLSite="http://www.icnf.pt/portal/ap/r-nat/rndsj", URLImg="~/Images/dunas1.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Fun"),  FunTypes = funTypes.SingleOrDefault(x=>x.FunTypeName=="Outdoor activities")},
+                new Utilities{Name="Estação da Luz",Acronym="EstacaoLuz",Address="Rua direita, Quintas 3810 Aveiro",PhoneNumber="234943979",Email="porteirovirtual@estacaodaluz.pt", URLSite="https://www.facebook.com/estacaodaluz", URLImg="~/Images/estacaoLuz.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Fun"),  FunTypes = funTypes.SingleOrDefault(x=>x.FunTypeName=="Bars & Pubs")},
+                new Utilities{Name="Praia da Costa Nova",Acronym="CostaNova",Address="R. da Quinta do Cravo 17, Aveiro",PhoneNumber="N/A",Email="N/A",URLSite="N/A", URLImg="~/Images/costaNova1.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Fun"),  FunTypes = funTypes.SingleOrDefault(x=>x.FunTypeName=="Beach")},
+                new Utilities{Name="Viagem Moliceiro",Acronym="Moliceiro",Address="Jardim do Rossio, Aveiro ",PhoneNumber="969008687",Email="vivaaria@gmail.com",URLSite="http://www.vivaaria.com/category/moliceiros-2/na-cidade-de-aveiro/", URLImg="~/Images/viagemMoliceiro.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Fun"),  FunTypes = funTypes.SingleOrDefault(x=>x.FunTypeName=="Outdoor activities")},
+                new Utilities{Name="Salinas",Acronym="Salinas",Address="R. da Pega 69, 3810-164 Aveiro, Portugal",PhoneNumber="N/A",Email="N/A",URLSite="http://www.visitcentrodeportugal.com.pt/pt/as-salinas-de-aveiro/", URLImg="~/Images/salinas.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Fun"),  FunTypes = funTypes.SingleOrDefault(x=>x.FunTypeName=="Outdoor activities")},
+                new Utilities{Name="Farol da Barra",Acronym="Farol",Address="Largo do Farol, Praia da Barra 3830-753 Gafanha da Nazaré, Portugal",PhoneNumber="234369271",Email="N/A",URLSite="http://www.cm-ilhavo.pt/pages/910", URLImg="~/Images/farol.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Fun"),  FunTypes = funTypes.SingleOrDefault(x=>x.FunTypeName=="Beach")},
+                new Utilities{Name="Museu Maritimo de Ilhavo",Acronym="MuseuIlhavo",Address="Avenida Dr. Rocha Madahíl 3830-193 Ílhavo Portugal",PhoneNumber="234329990",Email="museuilhavo@cm-ilhavo.pt",URLSite="http://www.museumaritimo.cm-ilhavo.pt/", URLImg="~/Images/museuIlhavo.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Fun"),  FunTypes = funTypes.SingleOrDefault(x=>x.FunTypeName=="Museum")},
+                new Utilities{Name="Reserva Natural das Dunas de S. Jacinto",Acronym="ReservasSaoJacinto",Address="Reserva Natural das Dunas de S. Jacinto. 3800 Aveiro",PhoneNumber="234331282",Email="angelina.barbosa@icnf.pt",URLSite="http://www.icnf.pt/portal/ap/r-nat/rndsj", URLImg="~/Images/dunas1.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Fun"),  FunTypes = funTypes.SingleOrDefault(x=>x.FunTypeName=="Outdoor activities")},
 
                 #endregion
                 
@@ -142,6 +143,66 @@ namespace MyAveiro.Migrations
             utilities.ForEach(s => context.Utilities.Add(s));
             context.SaveChanges();
             #endregion
+
+            #region IMAGES REPOSITORY
+            var imagesRep = new List<ImagesRepository>
+            {             
+                #region Emergency
+                #endregion
+
+                #region Transports
+                new ImagesRepository{URLImage="~/Images/buga.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="Buga")},
+                new ImagesRepository{URLImage="~/Images/buga1.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="Buga")},
+                #endregion
+
+                #region Police
+                #endregion
+
+                #region Rest
+                new ImagesRepository{URLImage="~/Images/meliaria.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="MeliaRia")},
+                new ImagesRepository{URLImage="~/Images/meliaria1.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="MeliaRia")},
+                new ImagesRepository{URLImage="~/Images/meliaria2.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="MeliaRia")},
+                new ImagesRepository{URLImage="~/Images/hotel1.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="MeliaRia")},
+                new ImagesRepository{URLImage="~/Images/royal.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="RoyalGuesthouse")},
+                new ImagesRepository{URLImage="~/Images/royal2.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="RoyalGuesthouse")},
+                new ImagesRepository{URLImage="~/Images/hostel1.png", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="RoyalGuesthouse")},
+                #endregion
+
+                #region Food
+                new ImagesRepository{URLImage="~/Images/salpoente.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="Salpoente")},
+                new ImagesRepository{URLImage="~/Images/salpoente1.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="Salpoente")},
+                new ImagesRepository{URLImage="~/Images/caisMadeirense.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="Cais")},
+                new ImagesRepository{URLImage="~/Images/caisMadeirense2.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="Cais")},
+                new ImagesRepository{URLImage="~/Images/caisMadeirense3.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="Cais")},
+                new ImagesRepository{URLImage="~/Images/alemao1.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="Alemao")},
+
+                #endregion
+
+                #region Fun
+                new ImagesRepository{URLImage="~/Images/estacaoLuz.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="EstacaoLuz")},
+                new ImagesRepository{URLImage="~/Images/estacaoLuz2.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="EstacaoLuz")},
+                new ImagesRepository{URLImage="~/Images/costaNova1.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="CostaNova")},
+                new ImagesRepository{URLImage="~/Images/costaNova2.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="CostaNova")},
+                new ImagesRepository{URLImage="~/Images/viagemMoliceiro.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="Moliceiro")},
+                new ImagesRepository{URLImage="~/Images/salinas.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="Salinas")},
+                new ImagesRepository{URLImage="~/Images/farol.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="Farol")},
+                new ImagesRepository{URLImage="~/Images/museuIlhavo.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="MuseuIlhavo")},
+                new ImagesRepository{URLImage="~/Images/dunas.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="ReservasSaoJacinto")},
+                new ImagesRepository{URLImage="~/Images/dunas1.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="ReservasSaoJacinto")},
+                new ImagesRepository{URLImage="~/Images/dunas2.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="ReservasSaoJacinto")},
+                new ImagesRepository{URLImage="~/Images/dunas3.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="ReservasSaoJacinto")},
+                #endregion
+
+                #region Events
+                #endregion
+
+                
+            };
+
+            imagesRep.ForEach(s => context.ImagesRepository.Add(s));
+            context.SaveChanges();
+            #endregion
+
         }
     }
 }
