@@ -13,20 +13,20 @@ namespace MyAveiro.Controllers
     {
         private MyAveiroContext db = new MyAveiroContext();
 
-        // GET: FoodTypes
+        // GET: EventTypes
         public ActionResult Index()
         {
             return View();
         }
 
 
-        // GET: RestTypes/Exhibitions
+        // GET: EventTypes/Exhibitions
         public ActionResult Exhibitions()
         {
-            return View(db.Utilities.Where(i => i.UtilitiesTypes.UtilityTypeName == "Event" && i.RestTypes.RestTypeName == "Exhibitions").ToList());
+            return View(db.Utilities.Where(i => i.UtilitiesTypes.UtilityTypeName == "Event" && i.EventTypes.EventTypeName == "Exhibitions").ToList());
         }
 
-        // GET: Utilities/ExhibitionsDetails/5
+        // GET: EventTypes/ExhibitionsDetails/5
         public ActionResult ExhibitionsDetails(int? id)
         {
             if (id == null)
@@ -40,5 +40,37 @@ namespace MyAveiro.Controllers
             }
             return View(utilities);
         }
+
+        // GET: EventTypes/Details/5
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Utilities utilities = db.Utilities.Find(id);
+            if (utilities == null)
+            {
+                return HttpNotFound();
+            }
+            return View(utilities);
+        }
+
+        //public ActionResult ImagesRepositoryPartial(string Acronym)
+        //{
+        //    List<String> listImagemRepository = GetAvailableImagesFromRepository(Acronym);
+        //    return PartialView("_ImageDetails", listImagemRepository);
+
+        //}
+
+        //public List<string> GetAvailableImagesFromRepository(string Acronym)
+        //{
+        //    if (Acronym != null && Acronym != string.Empty)
+        //        return db.ImagesRepository.Where(i => i.Utilities.Acronym == Acronym).Select(i => i.URLImage).ToList();
+        //    else
+        //        return new List<string>();
+        //}
+
+
     }
 }

@@ -213,8 +213,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Shared\_SideBar.cshtml" />
@@ -229,23 +227,18 @@
     <Content Include="Views\Utilities\Events.cshtml" />
     <Content Include="Views\RestTypes\Hostels.cshtml" />
     <Content Include="Views\RestTypes\Hotels.cshtml" />
-    <Content Include="Views\RestTypes\HostelDetails.cshtml" />
-    <Content Include="Views\RestTypes\HotelDetails.cshtml" />
     <Content Include="Views\FoodTypes\Restaurants.cshtml" />
     <Content Include="Views\EventTypes\Exhibitions.cshtml" />
-    <Content Include="Views\EventTypes\ExhibitionsDetails.cshtml" />
-    <Content Include="Views\FoodTypes\RestaurantsDetails.cshtml" />
     <Content Include="Views\FunTypes\Museum.cshtml" />
-    <Content Include="Views\FunTypes\MuseumDetails.cshtml" />
-    <Content Include="Views\FunTypes\Beach.cshtml" />
-    <Content Include="Views\FunTypes\BeachDetails.cshtml" />
     <Content Include="Views\FunTypes\OutdoorActivities.cshtml" />
-    <Content Include="Views\FunTypes\OutdoorActivitiesDetails.cshtml" />
-    <Content Include="Views\FunTypes\BarsPubs.cshtml" />
-    <Content Include="Views\FunTypes\BarsPubsDetails.cshtml" />
     <Content Include="Views\Home\Aveiro.cshtml" />
     <Content Include="Views\RestTypes\Details.cshtml" />
-    <Content Include="Views\RestTypes\_ImageDetails.cshtml" />
+    <Content Include="Views\EventTypes\Details.cshtml" />
+    <Content Include="Views\Utilities\_ImageDetails.cshtml" />
+    <Content Include="Views\FoodTypes\Details.cshtml" />
+    <Content Include="Views\FunTypes\Details.cshtml" />
+    <Content Include="Views\FunTypes\BarsPubs.cshtml" />
+    <Content Include="Views\FunTypes\Beach.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

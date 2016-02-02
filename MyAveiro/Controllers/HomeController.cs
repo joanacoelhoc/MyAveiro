@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyAveiro.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,28 +9,24 @@ namespace MyAveiro.Controllers
 {
     public class HomeController : Controller
     {
+        private MyAveiroContext db = new MyAveiroContext();
+
         public ActionResult Index()
         {
-            return View();
+            List<String> listImagemRepository = GetAvailableImagesFromRepository();
+
+            return View(listImagemRepository);
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
 
         public ActionResult Aveiro()
         {
             return View();
+        }
+
+        public List<string> GetAvailableImagesFromRepository()
+        {
+            return db.ImagesRepository.Select(i => i.URLImage).ToList();
         }
     }
 }

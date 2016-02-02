@@ -23,7 +23,7 @@ namespace MyAveiro.Controllers
         // GET: RestTypes/Museum
         public ActionResult Museum()
         {
-            return View(db.Utilities.Where(i => i.UtilitiesTypes.UtilityTypeName == "Fun" && i.RestTypes.RestTypeName == "Museum").ToList());
+            return View(db.Utilities.Where(i => i.UtilitiesTypes.UtilityTypeName == "Fun" && i.FunTypes.FunTypeName == "Museum").ToList());
         }
 
         // GET: Utilities/MuseumDetails/5
@@ -44,7 +44,7 @@ namespace MyAveiro.Controllers
         // GET: RestTypes/Beach
         public ActionResult Beach()
         {
-            return View(db.Utilities.Where(i => i.UtilitiesTypes.UtilityTypeName == "Fun" && i.RestTypes.RestTypeName == "Beach").ToList());
+            return View(db.Utilities.Where(i => i.UtilitiesTypes.UtilityTypeName == "Fun" && i.FunTypes.FunTypeName == "Beach").ToList());
         }
 
         // GET: Utilities/BeachDetails/5
@@ -66,7 +66,7 @@ namespace MyAveiro.Controllers
         // GET: RestTypes/OutdoorActivities
         public ActionResult OutdoorActivities()
         {
-            return View(db.Utilities.Where(i => i.UtilitiesTypes.UtilityTypeName == "Fun" && i.RestTypes.RestTypeName == "OutdoorActivities").ToList());
+            return View(db.Utilities.Where(i => i.UtilitiesTypes.UtilityTypeName == "Fun" && i.FunTypes.FunTypeName == "Outdoor Activities").ToList());
         }
 
         // GET: Utilities/OutdoorActivitiesDetails/5
@@ -87,7 +87,7 @@ namespace MyAveiro.Controllers
         // GET: RestTypes/BarsPubs
         public ActionResult BarsPubs()
         {
-            return View(db.Utilities.Where(i => i.UtilitiesTypes.UtilityTypeName == "Fun" && i.RestTypes.RestTypeName == "OutdoorActivities").ToList());
+            return View(db.Utilities.Where(i => i.UtilitiesTypes.UtilityTypeName == "Fun" && i.FunTypes.FunTypeName == "Bars & Pubs").ToList());
         }
 
         // GET: Utilities/BarsPubsDetails/5
@@ -103,6 +103,37 @@ namespace MyAveiro.Controllers
                 return HttpNotFound();
             }
             return View(utilities);
-        }   
+        }
+
+        // GET: RestTypes/Details/5
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Utilities utilities = db.Utilities.Find(id);
+            if (utilities == null)
+            {
+                return HttpNotFound();
+            }
+            return View(utilities);
+        }
+
+        //public ActionResult ImagesRepositoryPartial(string Acronym)
+        //{
+        //    List<String> listImagemRepository = GetAvailableImagesFromRepository(Acronym);
+        //    return PartialView("_ImageDetails", listImagemRepository);
+
+        //}
+
+        //public List<string> GetAvailableImagesFromRepository(string Acronym)
+        //{
+        //    if (Acronym != null && Acronym != string.Empty)
+        //        return db.ImagesRepository.Where(i => i.Utilities.Acronym == Acronym).Select(i => i.URLImage).ToList();
+        //    else
+        //        return new List<string>();
+        //}
+
     }
 }
