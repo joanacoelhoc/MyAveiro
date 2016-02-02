@@ -96,20 +96,20 @@ namespace MyAveiro.Migrations
             var utilities = new List<Utilities>
             { 
                 #region Emergency 
-                new Utilities{Name="Emergency",Acronym="SOS",Address="R. Conselheiro L. Magalhães, 3800 Aveiro",PhoneNumber="112", Email="email@email.com", URLSite="http://www.inem.pt/", URLImg="N/A", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Emergency")},
-                new Utilities{Name="Hospital Infante D. Pedro, EPE - Aveiro",Acronym="Hostipal",Address="Av. Artur Ravara, 3814-501 Aveiro",PhoneNumber="234378300", Email="sec-adm@chbv.min-saude.pt", URLSite="http://www.hidpedro.min-saude.pt", URLImg="N/A", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Emergency")},
+                new Utilities{Name="Emergency",Acronym="SOS",Address="R. Conselheiro L. Magalhães, 3800 Aveiro",PhoneNumber="112", Email="email@email.com", URLSite="http://www.inem.pt/", URLImg="~/Images/inem.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Emergency")},
+                new Utilities{Name="Hospital Infante D. Pedro, EPE - Aveiro",Acronym="Hostipal",Address="Av. Artur Ravara, 3814-501 Aveiro",PhoneNumber="234378300", Email="sec-adm@chbv.min-saude.pt", URLSite="http://www.hidpedro.min-saude.pt", URLImg="~/Images/hospital.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Emergency")},
                 #endregion
                 
                 #region Transports 
-                new Utilities{Name="Taxi",Acronym="Taxi",Address="Edifício C Coordenador Transportes Aveiro Esgueira, 3800 AVEIRO ",PhoneNumber="234385799",Email="N/A", URLSite="http://taxisaveiro.pt/pt", URLImg="N/A", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Transport")},
-                new Utilities{Name="MoveAveiro",Acronym="Bus",Address="Rua Artur Almeida Eça, 3800-111 Aveiro",PhoneNumber="234380560",Email="moveaveiro@moveaveiro.pt", URLSite="http://www.moveaveiro.pt/",URLImg="N/A", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Transport")},
+                new Utilities{Name="Taxi",Acronym="Taxi",Address="Edifício C Coordenador Transportes Aveiro Esgueira, 3800 AVEIRO ",PhoneNumber="234385799",Email="N/A", URLSite="http://taxisaveiro.pt/pt", URLImg="~/Images/taxi.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Transport")},
+                new Utilities{Name="MoveAveiro",Acronym="Bus",Address="Rua Artur Almeida Eça, 3800-111 Aveiro",PhoneNumber="234380560",Email="moveaveiro@moveaveiro.pt", URLSite="http://www.moveaveiro.pt/",URLImg="~/Images/moveaveiro2.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Transport")},
                 new Utilities{Name="Buga",Acronym="Buga",Address="Praça do Mercado 2, 3800 Aveiro, Portugal",PhoneNumber="234380560",Email="N/A",URLSite="http://www.visitcentrodeportugal.com.pt/pt/bugas-bicicletas-gratuitas-de-aveiro/", URLImg="~/Images/buga.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Transport")},
 
                 #endregion
                 
                 #region Police 
-                new Utilities{Name="Policia de Segurança Pública",Acronym="PSP",Address="Praça Marquês de Pombal, 3810-133 Aveiro",PhoneNumber="234400290",Email="cpaveiro@psp", URLSite="http://www.psp.pt/",URLImg="N/A", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Police")},
-                new Utilities{Name="Guarda Nacional Republicana",Acronym="GNR",Address="Rua de Sá, 3804-503 Aveiro",PhoneNumber="234378220",Email="ct.avr@gnr.pt", URLSite="http://www.gnr.pt", URLImg="N/A", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Police")},
+                new Utilities{Name="Policia de Segurança Pública",Acronym="PSP",Address="Praça Marquês de Pombal, 3810-133 Aveiro",PhoneNumber="234400290",Email="cpaveiro@psp", URLSite="http://www.psp.pt/",URLImg="~/Images/psp.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Police")},
+                new Utilities{Name="Guarda Nacional Republicana",Acronym="GNR",Address="Rua de Sá, 3804-503 Aveiro",PhoneNumber="234378220",Email="ct.avr@gnr.pt", URLSite="http://www.gnr.pt", URLImg="~/Images/gnr1.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Police")},
                #endregion
                 
                 #region Rest 
@@ -130,7 +130,7 @@ namespace MyAveiro.Migrations
                 new Utilities{Name="Viagem Moliceiro",Acronym="Moliceiro",Address="Jardim do Rossio, Aveiro ",PhoneNumber="969008687",Email="vivaaria@gmail.com",URLSite="http://www.vivaaria.com/category/moliceiros-2/na-cidade-de-aveiro/", URLImg="~/Images/viagemMoliceiro.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Fun"),  FunTypes = funTypes.SingleOrDefault(x=>x.FunTypeName=="Outdoor activities")},
                 new Utilities{Name="Salinas",Acronym="Salinas",Address="R. da Pega 69, 3810-164 Aveiro, Portugal",PhoneNumber="N/A",Email="N/A",URLSite="http://www.visitcentrodeportugal.com.pt/pt/as-salinas-de-aveiro/", URLImg="~/Images/salinas.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Fun"),  FunTypes = funTypes.SingleOrDefault(x=>x.FunTypeName=="Outdoor activities")},
                 new Utilities{Name="Farol da Barra",Acronym="Farol",Address="Largo do Farol, Praia da Barra 3830-753 Gafanha da Nazaré, Portugal",PhoneNumber="234369271",Email="N/A",URLSite="http://www.cm-ilhavo.pt/pages/910", URLImg="~/Images/farol.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Fun"),  FunTypes = funTypes.SingleOrDefault(x=>x.FunTypeName=="Beach")},
-                new Utilities{Name="Museu Maritimo de Ilhavo",Acronym="MuseuIlhavo",Address="Avenida Dr. Rocha Madahíl 3830-193 Ílhavo Portugal",PhoneNumber="234329990",Email="museuilhavo@cm-ilhavo.pt",URLSite="http://www.museumaritimo.cm-ilhavo.pt/", URLImg="~/Images/museuIlhavo.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Fun"),  FunTypes = funTypes.SingleOrDefault(x=>x.FunTypeName=="Museum")},
+                new Utilities{Name="Museu Maritimo de Ilhavo",Acronym="MuseuIlhavo",Address="Av. Dr. Rocha Madahil,3830-193 Ílhavo",PhoneNumber="234329990",Email="museuilhavo@cm-ilhavo.pt",URLSite="http://www.museumaritimo.cm-ilhavo.pt/", URLImg="~/Images/museuIlhavo.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Fun"),  FunTypes = funTypes.SingleOrDefault(x=>x.FunTypeName=="Museum")},
                 new Utilities{Name="Reserva Natural das Dunas de S. Jacinto",Acronym="ReservasSaoJacinto",Address="Reserva Natural das Dunas de S. Jacinto. 3800 Aveiro",PhoneNumber="234331282",Email="angelina.barbosa@icnf.pt",URLSite="http://www.icnf.pt/portal/ap/r-nat/rndsj", URLImg="~/Images/dunas1.jpg", UtilitiesTypes =  utilitiesTypes.SingleOrDefault(x=>x.UtilityTypeName=="Fun"),  FunTypes = funTypes.SingleOrDefault(x=>x.FunTypeName=="Outdoor activities")},
 
                 #endregion
@@ -148,14 +148,20 @@ namespace MyAveiro.Migrations
             var imagesRep = new List<ImagesRepository>
             {             
                 #region Emergency
+                new ImagesRepository{URLImage="~/Images/inem.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="SOS")},               
+                new ImagesRepository{URLImage="~/Images/hospital.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="Hospital")},
                 #endregion
 
                 #region Transports
+                new ImagesRepository{URLImage="~/Images/taxi.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="Taxi")},               
+                new ImagesRepository{URLImage="~/Images/moveaveiro2.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="Bus")},
                 new ImagesRepository{URLImage="~/Images/buga.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="Buga")},
                 new ImagesRepository{URLImage="~/Images/buga1.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="Buga")},
                 #endregion
 
                 #region Police
+                new ImagesRepository{URLImage="~/Images/psp.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="PSP")},               
+                new ImagesRepository{URLImage="~/Images/gnr1.jpg", Utilities = utilities.SingleOrDefault(x=>x.Acronym =="GNR")},
                 #endregion
 
                 #region Rest

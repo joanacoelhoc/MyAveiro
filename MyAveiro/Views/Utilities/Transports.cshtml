@@ -28,9 +28,12 @@
                     </th>
                     <th></th>
                     <th>
+                        @Html.DisplayName("Phone")
+                    </th>
+                    <th>
                         @Html.DisplayName("Web Site")
                     </th>
-                    <th></th>
+                   
                 </tr>
 
                 @foreach (var item in Model)
@@ -44,16 +47,16 @@
                             @Html.DisplayFor(modelItem => item.Address)
                         </td>
                         <td>
-                            <img src="@Url.Content(item.URLImg)" alt="Not found" width="150px" height="100px">
+                            <img src="@Url.Content(item.URLImg)" alt="Not found" width="150" height="100">
                         </td>
-
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PhoneNumber)
+                        </td>
                         <td>
                             <a href="@Url.Content(item.URLSite)">Visit</a>
 
                         </td>
-                        <td>
-                            @Html.ActionLink("Details", "Details", "Utilities", new { id = item.ID }, null)
-                        </td>
+                        
                     </tr>
                 }
             </table>

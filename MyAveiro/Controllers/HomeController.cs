@@ -11,6 +11,7 @@ namespace MyAveiro.Controllers
     {
         private MyAveiroContext db = new MyAveiroContext();
 
+        // GET: Home
         public ActionResult Index()
         {
             List<String> listImagemRepository = GetAvailableImagesFromRepository();
@@ -18,7 +19,7 @@ namespace MyAveiro.Controllers
             return View(listImagemRepository);
         }
 
-
+        // GET: Home/Aveiro
         public ActionResult Aveiro()
         {
             return View();
@@ -26,7 +27,9 @@ namespace MyAveiro.Controllers
 
         public List<string> GetAvailableImagesFromRepository()
         {
-            return db.ImagesRepository.Select(i => i.URLImage).ToList();
+            return db.ImagesRepository.Where(i => i.Utilities.UtilitiesTypes.UtilityTypeName != "Police"
+                && i.Utilities.UtilitiesTypes.UtilityTypeName != "Transport" 
+                && i.Utilities.UtilitiesTypes.UtilityTypeName!="Emergency").Select(i => i.URLImage).ToList();
         }
     }
 }

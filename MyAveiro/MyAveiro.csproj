@@ -123,7 +123,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RestTypesController.cs" />
     <Compile Include="Controllers\UtilitiesController.cs" />
-    <Compile Include="Controllers\UtilitiesTypesController.cs" />
     <Compile Include="DAL\MyAveiroContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -176,17 +175,23 @@
     <Content Include="Images\estacaoLuz.jpg" />
     <Content Include="Images\estacaoLuz2.jpg" />
     <Content Include="Images\farol.jpg" />
+    <Content Include="Images\gnr1.jpg" />
+    <Content Include="Images\hospital.jpg" />
     <Content Include="Images\hostel1.png" />
     <Content Include="Images\hotel1.jpg" />
+    <Content Include="Images\inem.jpg" />
     <Content Include="Images\meliaria.jpg" />
     <Content Include="Images\meliaria1.jpg" />
     <Content Include="Images\meliaria2.jpg" />
+    <Content Include="Images\moveaveiro2.jpg" />
     <Content Include="Images\museuIlhavo.jpg" />
+    <Content Include="Images\psp.jpg" />
     <Content Include="Images\royal.jpg" />
     <Content Include="Images\royal2.jpg" />
     <Content Include="Images\salinas.jpg" />
     <Content Include="Images\salpoente.jpg" />
     <Content Include="Images\salpoente1.jpg" />
+    <Content Include="Images\taxi.jpg" />
     <Content Include="Images\viagemMoliceiro.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

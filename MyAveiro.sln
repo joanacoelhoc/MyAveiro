@@ -5,8 +5,6 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAveiro", "MyAveiro\MyAveiro.csproj", "{BB2DB3DC-0727-4F40-B5F7-F1BF772C4545}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "MyAveiroDB", "MyAveiroDB\MyAveiroDB.sqlproj", "{DA3147AE-CA23-4BC7-8C87-4D9BC666F230}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +15,6 @@ Global
 		{BB2DB3DC-0727-4F40-B5F7-F1BF772C4545}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB2DB3DC-0727-4F40-B5F7-F1BF772C4545}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB2DB3DC-0727-4F40-B5F7-F1BF772C4545}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DA3147AE-CA23-4BC7-8C87-4D9BC666F230}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DA3147AE-CA23-4BC7-8C87-4D9BC666F230}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DA3147AE-CA23-4BC7-8C87-4D9BC666F230}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{DA3147AE-CA23-4BC7-8C87-4D9BC666F230}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DA3147AE-CA23-4BC7-8C87-4D9BC666F230}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DA3147AE-CA23-4BC7-8C87-4D9BC666F230}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
